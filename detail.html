@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#193b4d">
+    <title>Detail Jelajah Kebumen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body class="detail-page">
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top detail-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="brand-mark">J</span>
+            Jelajah<span class="brand-highlight">Kebumen.</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#detailNav" aria-label="Buka navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="detailNav">
+            <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link" href="index.html#jelajah">Jelajahi</a>
+                <a class="nav-link" href="about.html">Tentang Kebumen</a>
+                <a class="nav-link" href="feedback.html">Beri Masukan</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="detail-hero">
+        <div class="container">
+            <a class="detail-back" href="index.html#jelajah">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke galeri
+            </a>
+
+            <div class="detail-hero-grid">
+                <div class="detail-heading">
+                    <span class="section-kicker" id="detailCategory">JELAJAH KEBUMEN</span>
+                    <h1 id="detailTitle">Cerita dari Kebumen</h1>
+                    <p id="detailIntro"></p>
+                    <div class="detail-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Kabupaten Kebumen, Jawa Tengah
+                    </div>
+                </div>
+
+                <div class="detail-photo-wrap">
+                    <img id="detailImage" src="images/wisata.jpg"
+                        alt="Foto destinasi di Kebumen">
+                    <span class="detail-photo-caption" id="detailCaption">
+                        Jelajah Kebumen
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content-section">
+        <div class="container">
+            <div class="detail-content-grid">
+                <article class="detail-article">
+                    <span class="section-kicker">MENGENAL LEBIH DEKAT</span>
+                    <h2>Tentang <span id="detailTitleInline">tempat ini</span></h2>
+                    <p id="detailDescription"></p>
+
+                    <div class="detail-story-box">
+                        <div class="detail-story-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h3>Sejarah dan asal-usul</h3>
+                            <p id="detailHistory"></p>
+                        </div>
+                    </div>
+
+                    <h2 class="detail-subheading">Hal menarik untuk diketahui</h2>
+                    <p id="detailHighlights"></p>
+
+                    <div class="detail-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p id="detailNote">
+                            Informasi disusun untuk pengenalan umum. Periksa
+                            sumber resmi setempat untuk informasi kunjungan terbaru.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="detail-sidebar">
+                    <div class="detail-sidebar-card">
+                        <span class="section-kicker">JELAJAHI LAGI</span>
+                        <h3>Masih banyak cerita lainnya.</h3>
+                        <p>Temukan tempat, tradisi, dan rasa khas lainnya dari Kebumen.</p>
+                        <a href="index.html#jelajah" class="detail-sidebar-button">
+                            Kembali ke galeri
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="detail-sidebar-card detail-source-card">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <h3>Untuk informasi lebih lanjut</h3>
+                        <p>Gunakan sumber pemerintah dan pengelola resmi untuk memeriksa informasi sejarah, lokasi, serta kunjungan.</p>
+                        <a id="detailSource" href="https://www.kebumenkab.go.id/"
+                            target="_blank" rel="noopener noreferrer">
+                            Buka sumber informasi
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-bottom-cta">
+        <div class="container">
+            <div>
+                <span class="section-kicker">LANJUTKAN PERJALANANMU</span>
+                <h2>Temukan cerita <span>Kebumen</span> lainnya.</h2>
+            </div>
+            <a href="index.html#jelajah" class="btn-hero-primary">
+                Lihat semua koleksi <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; <span id="detailYear"></span> Jelajah Kebumen. Proyek pengenalan daerah.</p>
+            <a href="#" class="back-to-top">Kembali ke atas <i class="fa-solid fa-arrow-up ms-1"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/script.js"></script>
+<script>
+(() => {
+    const data = {
+        menganti: {
+            title: "Pantai Menganti", category: "Wisata alam",
+            image: "images/wisata.jpg",
+            intro: "Pantai berpasir putih yang berpadu dengan tebing karst dan perbukitan hijau di pesisir selatan Kebumen.",
+            description: "Pantai Menganti berada di Desa Karangduwur, Kecamatan Ayah. Pemandangan laut dari ketinggian, garis pantai, dan perbukitan di sekitarnya menjadi daya tarik utama tempat ini.",
+            history: "Pantai Menganti dikenal sebagai destinasi wisata alam pesisir selatan Kebumen. Informasi resmi pariwisata daerah menempatkannya di Desa Karangduwur, Kecamatan Ayah. Untuk kisah asal-usul nama atau sejarah lokal yang lebih rinci, sebaiknya merujuk kepada pemerintah desa atau pengelola setempat.",
+            highlights: "Pengunjung dapat menikmati panorama Samudra Hindia dari area perbukitan. Kawasan Tanjung Karangbata dan mercusuar juga dikenal sebagai titik pandang di sekitar pantai.",
+            note: "Lokasi: Desa Karangduwur, Kecamatan Ayah. Perhatikan kondisi ombak, cuaca, dan petunjuk keselamatan di lokasi.",
+            source: "https://disparbud.kebumenkab.go.id/index.php/web/post/1395/pantai-menganti"
+        },
+        suwuk: {
+            title: "Pantai Suwuk", category: "Wisata alam",
+            image: "images/wisata1.jpg",
+            intro: "Destinasi pesisir dengan panorama Samudra Hindia, bukit-bukit, dan suasana pantai yang khas.",
+            description: "Pantai Suwuk terletak di Desa Tambakmulya, Kecamatan Puring. Kawasan ini menjadi pilihan wisatawan yang ingin menikmati pemandangan laut dan suasana pesisir Kebumen.",
+            history: "Pantai Suwuk berkembang sebagai salah satu tujuan wisata pesisir di Kecamatan Puring. Informasi pariwisata pemerintah daerah mencatat lokasinya di Desa Tambakmulya. Untuk sejarah pembukaan atau perkembangan awal kawasan wisata ini, gunakan keterangan dari pemerintah desa atau pengelola setempat.",
+            highlights: "Daya tariknya meliputi pemandangan pantai, bukit di sekitar pesisir, aktivitas rekreasi, dan wahana yang tersedia sesuai kondisi operasional.",
+            note: "Lokasi: Desa Tambakmulya, Kecamatan Puring. Ombak pantai selatan dapat kuat; ikuti arahan keselamatan dan jangan berenang di area berbahaya.",
+            source: "https://disparbud.kebumenkab.go.id/index.php/web/post/1389/pantai-suwuk"
+        },
+        jatijajar: {
+            title: "Goa Jatijajar", category: "Wisata alam dan sejarah",
+            image: "images/wisata2.jpg",
+            intro: "Gua batu kapur yang memadukan bentang alam, formasi gua, dan cerita rakyat yang dikenal masyarakat.",
+            description: "Goa Jatijajar berada di Desa Jatijajar, Kecamatan Ayah. Bagian dalam gua memperlihatkan bentukan alam dari batu kapur yang terbentuk melalui proses geologi dalam waktu yang panjang.",
+            history: "Catatan pemerintah daerah menyebut gua ini ditemukan pada 1802 oleh seorang petani bernama Jaya Menawi atau Djayamenawi. Gua kemudian dikembangkan menjadi objek wisata pada 1970-an. Kisah legenda yang menyertainya juga menjadi bagian dari pengalaman pengunjung.",
+            highlights: "Daya tariknya mencakup ruang gua, stalaktit dan stalagmit, serta diorama yang menggambarkan cerita legenda. Jaga kebersihan dan ikuti jalur yang ditetapkan pengelola.",
+            note: "Lokasi: Desa Jatijajar, Kecamatan Ayah. Detail sejarah dirangkum dari informasi pemerintah daerah.",
+            source: "https://perizinan.kebumenkab.go.id/investasi/web/wisata/detail/1"
+        },
+        sempor: {
+            title: "Waduk Sempor", category: "Wisata alam dan sejarah",
+            image: "images/wisata3.jpg",
+            intro: "Waduk yang dikelilingi perbukitan dan memiliki peran penting bagi pengairan serta kehidupan masyarakat.",
+            description: "Waduk Sempor berada di Kecamatan Sempor. Selain menjadi tujuan untuk menikmati pemandangan, waduk ini juga memiliki fungsi penting dalam pengairan, pembangkit listrik, perikanan, dan pengelolaan air.",
+            history: "Rencana pembangunan waduk telah diteliti sejak masa Hindia Belanda. Pembangunan kemudian dilanjutkan setelah Indonesia merdeka. Bendungan yang dibangun pada tahap awal mengalami kegagalan pada 1967 dan menimbulkan korban jiwa. Waduk kemudian dibangun kembali dengan konstruksi permanen dan diresmikan pada 1978. Monumen di kawasan ini menjadi pengingat tragedi tersebut.",
+            highlights: "Pemandangan perairan dan perbukitan menjadi daya tariknya. Waduk juga menunjukkan hubungan erat antara infrastruktur air, pertanian, energi, dan sejarah masyarakat setempat.",
+            note: "Hormati kawasan waduk sebagai infrastruktur penting. Ikuti aturan pengelola saat berwisata.",
+            source: "https://www.kebumenkab.go.id/index.php/web/article/detail/2916"
+        },
+        cepetan: {
+            title: "Tari Cepetan Alas", category: "Budaya",
+            image: "images/budaya.jpg",
+            intro: "Kesenian tradisional Kebumen yang menampilkan topeng, gerak tari, dan cerita yang hidup di masyarakat.",
+            description: "Tari Cepetan Alas merupakan salah satu kesenian tradisional yang dikenal di wilayah Kebumen. Pertunjukannya menggabungkan gerak, musik, topeng, dan unsur cerita yang diwariskan melalui kehidupan masyarakat.",
+            history: "Kesenian tradisional tumbuh dan berubah melalui praktik komunitas yang menjaganya. Cerita rinci mengenai asal-usul, tokoh, dan perkembangan Tari Cepetan Alas dapat berbeda menurut kelompok atau desa pelestarinya; keterangan lokal sebaiknya dicocokkan dengan pelaku seni dan sumber kebudayaan daerah.",
+            highlights: "Topeng dan karakter yang ditampilkan menjadi unsur visual penting. Pertunjukan juga menjadi ruang bagi generasi muda untuk mengenal seni tradisi.",
+            note: "Deskripsi ini merupakan pengenalan umum. Detail cerita pertunjukan dapat ditambahkan setelah diverifikasi kepada pelaku seni setempat.",
+            source: "https://disparbud.kebumenkab.go.id/index.php/web/post/384/tari-cepetan"
+        },
+        lawet: {
+            title: "Tari Lawet", category: "Budaya",
+            image: "images/budaya2.jpg",
+            intro: "Tarian yang terinspirasi dari burung lawet atau walet, yang lekat dengan identitas dan kehidupan masyarakat Kebumen.",
+            description: "Tari Lawet menggambarkan gerakan burung lawet melalui gerakan yang lincah dan dinamis. Tarian ini menjadi salah satu simbol seni budaya Kebumen.",
+            history: "Menurut publikasi Pemerintah Kabupaten Kebumen, Tari Lawet pertama kali dipentaskan pada 1987. Inspirasinya berkaitan dengan burung walet dan peran sarangnya bagi kehidupan ekonomi masyarakat pesisir selatan.",
+            highlights: "Gerakan penari menirukan burung yang terbang dan mencari makan. Musik pengiring dan kostum mendukung gambaran burung lawet dalam pertunjukan.",
+            note: "Informasi diringkas dari publikasi resmi pemerintah daerah.",
+            source: "https://www.kebumenkab.go.id/index.php/web/article/detail/8209"
+        },
+        batik: {
+            title: "Batik Kebumen", category: "Budaya dan kerajinan",
+            image: "images/batik.jpg",
+            intro: "Kerajinan batik yang menjaga keterampilan membatik sekaligus menampilkan karakter budaya lokal.",
+            description: "Batik Kebumen dibuat melalui proses membatik yang membutuhkan ketelitian. Perajin menghasilkan kain dengan motif dan warna yang berkembang dari tradisi setempat.",
+            history: "Publikasi pemerintah daerah menyebut terdapat lebih dari satu versi tentang awal tradisi batik di Kebumen. Tradisi ini diwariskan turun-temurun dan pernah mengalami masa kejayaan pada sekitar 1960–1980-an, sebelum menghadapi masa surut dan upaya kebangkitan kembali.",
+            highlights: "Batik tulis dan batik cap merupakan dua teknik yang dikenal. Proses tradisional, ragam motif, serta keterampilan perajin menjadi bagian penting dari nilai kerajinan ini.",
+            note: "Keterangan sejarah batik Kebumen memiliki beberapa versi; uraian ini menyampaikan ringkasan tanpa menganggap satu versi sebagai satu-satunya kisah.",
+            source: "https://www.kebumenkab.go.id/index.php/web/article/detail/5035"
+        },
+        ebleg: {
+            title: "Ebleg", category: "Budaya",
+            image: "images/ebleg.jpg",
+            intro: "Kesenian rakyat yang menggunakan properti kuda kepang dan menjadi bagian dari tradisi pertunjukan masyarakat.",
+            description: "Ebleg dikenal sebagai kesenian rakyat yang menampilkan penari, properti berbentuk kuda, iringan musik, dan gerak yang dinamis. Bentuk pertunjukan dapat berbeda sesuai kelompok pelestari dan daerahnya.",
+            history: "Ebleg hidup melalui tradisi pertunjukan dan keterlibatan kelompok seni masyarakat. Agar sejarah asal-usul yang lebih khusus untuk Ebleg Kebumen tidak keliru, informasi tentang pendiri, masa kemunculan, dan perkembangan kelompok sebaiknya dilengkapi melalui wawancara dengan pelaku seni atau sumber kebudayaan setempat.",
+            highlights: "Properti kuda kepang, kostum, iringan musik, dan interaksi penari menjadi unsur yang mudah dikenali dalam pertunjukan.",
+            note: "Jika kamu mengetahui nama kelompok Ebleg atau desa asal yang ditampilkan dalam foto, sejarahnya bisa dibuat lebih spesifik.",
+            source: "https://www.kebumenkab.go.id/index.php/web/post/detail/53"
+        },
+        sate: {
+            title: "Sate Ambal", category: "Kuliner",
+            image: "images/makanan1.jpg",
+            intro: "Kuliner khas dari kawasan Ambal yang dikenal dengan racikan bumbu dan cara penyajian yang khas.",
+            description: "Sate Ambal merupakan salah satu makanan yang identik dengan Kabupaten Kebumen. Daging sate disajikan dengan bumbu khas yang membedakannya dari sejumlah jenis sate lain.",
+            history: "Sate Ambal tumbuh sebagai kuliner daerah yang dikenal dari kawasan Ambal. Resep dan cara pengolahan diwariskan melalui penjual serta keluarga, sehingga detail racikan bisa berbeda antarwarung. Kisah pendirian penjual tertentu sebaiknya merujuk pada sejarah usaha masing-masing.",
+            highlights: "Ciri yang sering dikenali adalah bumbu berwarna kecokelatan dengan bahan dasar tempe dan rasa gurih-manis. Kuliner ini menjadi salah satu pilihan yang dicari saat mengenal makanan khas Kebumen.",
+            note: "Foto pada kartu mengikuti file yang tersedia di proyek. Pastikan foto benar-benar menampilkan Sate Ambal sebelum website dipublikasikan.",
+            source: "https://www.kebumenkab.go.id/index.php/web/article/detail/166"
+        },
+        lanting: {
+            title: "Lanting", category: "Kuliner",
+            image: "images/makanan2.jpg",
+            intro: "Camilan berbahan singkong yang populer sebagai jajanan dan oleh-oleh dari Kebumen.",
+            description: "Lanting dibuat dari singkong yang diolah menjadi adonan, dibentuk, kemudian digoreng hingga renyah. Bentuknya sering menyerupai angka delapan atau lingkaran kecil.",
+            history: "Lanting berkembang sebagai makanan olahan singkong di wilayah Kebumen dan sekitarnya. Seperti banyak camilan tradisional, pembuatannya diwariskan melalui usaha rumahan dan produsen lokal. Sejarah pasti kemunculan lanting memerlukan sumber khusus dari sentra produksinya.",
+            highlights: "Lanting memiliki tekstur renyah dan tersedia dalam beragam rasa. Produk ini juga menjadi contoh bagaimana bahan pangan lokal diolah menjadi usaha kuliner.",
+            note: "Periksa kecocokan foto dengan lanting karena file makanan2.jpg sebelumnya digunakan pada kartu kuliner.",
+            source: "https://www2.kebumenkab.go.id/index.php/web/post/detail/52"
+        },
+        penggel: {
+            title: "Nasi Penggel", category: "Kuliner",
+            image: "images/makanan3.jpg",
+            intro: "Sajian nasi berbentuk bulat kecil yang biasa dinikmati bersama lauk dan sayur berkuah.",
+            description: "Nasi Penggel adalah kuliner khas Kebumen yang umumnya disajikan dalam bentuk kepalan nasi kecil, ditemani sayur nangka atau gulai dan lauk seperti kikil maupun jeroan sesuai penjual.",
+            history: "Nasi Penggel dikenal sebagai bagian dari tradisi makan masyarakat Kebumen, terutama sebagai menu sarapan. Resep keluarga dan cara penyajian diwariskan antargenerasi. Riwayat pencipta pertama atau tahun kemunculannya tidak dinyatakan di sini karena memerlukan sumber sejarah kuliner yang lebih spesifik.",
+            highlights: "Bentuk nasi yang bulat kecil dan sajian dengan kuah gurih menjadi ciri yang mudah dikenali. Pengalaman rasa dapat berbeda sesuai racikan penjual.",
+            note: "Foto makanan3.jpg digunakan sesuai penamaan file yang kamu berikan; pastikan gambar menampilkan Nasi Penggel.",
+            source: "https://visitjawatengah.jatengprov.go.id/id/regency/kabupaten-kebumen/kuliner/nasi-penggel"
+        },
+        jipang: {
+            title: "Jipang Kacang", category: "Kuliner",
+            image: "images/makanan4.jpg",
+            intro: "Jajanan tradisional yang memadukan kacang dengan pemanis hingga membentuk camilan padat dan renyah.",
+            description: "Jipang kacang merupakan jajanan tradisional berbahan kacang yang disatukan dengan larutan gula atau pemanis. Camilan ini cocok dinikmati sebagai kudapan dan dikenal dalam ragam jajanan rumahan.",
+            history: "Jajanan berbahan kacang dan gula telah lama dibuat sebagai camilan rumahan di berbagai daerah. Untuk riwayat khusus Jipang Kacang Kebumen, seperti asal desa atau perintisnya, informasi perlu dikonfirmasi kepada produsen lokal agar tidak mencampur cerita dari daerah lain.",
+            highlights: "Perpaduan rasa manis dan kacang menjadi daya tarik utamanya. Bentuk, tekstur, dan resep dapat berbeda sesuai pembuatnya.",
+            note: "Pastikan foto makanan4.jpg benar-benar memperlihatkan jipang kacang yang ingin kamu tampilkan.",
+            source: "https://www2.kebumenkab.go.id/index.php/web/post/detail/52"
+        },
+        benteng: {
+            title: "Benteng Van der Wijck", category: "Sejarah",
+            image: "images/sejarahkota.jpg",
+            intro: "Bangunan benteng bersejarah di Gombong yang dikenal dengan arsitektur bata merahnya.",
+            description: "Benteng Van der Wijck terletak di Gombong, Kabupaten Kebumen. Bangunan ini menjadi salah satu peninggalan sejarah yang dikenal masyarakat dan sering dikunjungi untuk melihat arsitektur serta mengenal masa lalu kawasan tersebut.",
+            history: "Benteng ini berkaitan dengan periode kolonial Hindia Belanda. Detail tentang fungsi awal, perubahan penggunaan, dan sejarah bangunannya sebaiknya dibaca melalui sumber sejarah atau informasi pengelola agar kronologi yang ditampilkan tetap akurat.",
+            highlights: "Bentuk bangunan dan susunan bata merah menjadi ciri visual yang menonjol. Kawasan ini juga dapat menjadi titik awal untuk mempelajari sejarah Gombong dan Kebumen.",
+            note: "Gambar sejarahkota.jpg pada proyekmu terlihat berupa dokumentasi hitam-putih. Pastikan gambar tersebut sesuai dengan Benteng Van der Wijck; jika tidak, ganti dengan foto benteng yang benar.",
+            source: "https://www.kebumenkab.go.id/"
+        },
+        sejarah: {
+            title: "Jejak Sejarah Kebumen", category: "Sejarah",
+            image: "images/sejarahkota2.jpg",
+            intro: "Mengenal perjalanan daerah melalui arsip, bangunan, kisah masyarakat, dan perubahan kehidupan dari masa ke masa.",
+            description: "Sejarah Kebumen terbentuk melalui perkembangan permukiman, pemerintahan, perdagangan, pendidikan, dan kehidupan masyarakat. Foto arsip dapat membantu pengunjung membandingkan suasana daerah pada masa lalu dengan kondisi sekarang.",
+            history: "Sejarah suatu kabupaten tidak berasal dari satu peristiwa saja. Untuk menyusun kronologi yang tepat, gunakan arsip pemerintah, dokumen sejarah, museum, dan sumber lokal yang mencantumkan tanggal serta konteks gambar.",
+            highlights: "Foto lama, dokumen, bangunan, dan cerita lisan dapat menjadi petunjuk untuk memahami perubahan wilayah. Cantumkan tanggal, lokasi, dan sumber pada foto arsip jika tersedia.",
+            note: "Identitas objek pada foto sejarahkota2.jpg sebaiknya diperiksa sebelum diberi keterangan yang lebih spesifik.",
+            source: "https://www.kebumenkab.go.id/"
+        },
+        geopark: {
+            title: "Geopark Kebumen", category: "Alam dan warisan geologi",
+            image: "images/geopark.jpg",
+            intro: "Kawasan yang memperlihatkan kekayaan geologi dan kisah panjang pembentukan bentang alam Kebumen.",
+            description: "Kawasan geopark menghubungkan warisan geologi dengan lingkungan, keanekaragaman hayati, serta kehidupan masyarakat. Bentang alam Kebumen menyimpan batuan dan struktur geologi yang membantu menjelaskan sejarah bumi.",
+            history: "Batuan dan bentang alam terbentuk melalui proses geologi yang berlangsung sangat lama, termasuk pengendapan, perubahan tektonik, dan pengangkatan. Penjelasan tiap lokasi geologi perlu disesuaikan dengan situs yang benar-benar ditampilkan pada foto.",
+            highlights: "Geopark dapat menjadi ruang belajar mengenai bumi sekaligus mendorong pariwisata yang memperhatikan konservasi dan manfaat bagi masyarakat lokal.",
+            note: "Jika foto geopark.jpg menunjukkan lokasi atau papan tertentu, tambahkan nama lokasi dan keterangan resmi agar informasi lebih tepat.",
+            source: "https://www.kebumenkab.go.id/"
+        },
+        kebumen: {
+            title: "Kebumen Hari Ini", category: "Kehidupan lokal",
+            image: "images/wisata4.jpg",
+            intro: "Melihat Kebumen sebagai daerah yang terus berkembang dengan kehidupan masyarakat dan potensi lokalnya.",
+            description: "Kabupaten Kebumen memiliki kehidupan sosial dan ekonomi yang beragam, mulai dari kegiatan pertanian dan usaha lokal hingga pariwisata serta layanan publik. Perubahan daerah dapat dilihat melalui ruang publik, fasilitas, dan aktivitas masyarakat.",
+            history: "Kondisi Kebumen hari ini merupakan bagian dari perjalanan panjang daerah. Untuk menampilkan perubahan secara historis, bandingkan foto lama dan baru yang memiliki lokasi sama serta sertakan tahun pengambilan gambar.",
+            highlights: "Potensi lokal dapat dikenalkan melalui kegiatan masyarakat, produk usaha, kawasan wisata, dan pelestarian budaya. Foto yang diberi keterangan lokasi dan tahun akan membantu pengunjung memahami konteksnya.",
+            note: "Foto wisata4.jpg pada foldermu terlihat seperti kawasan waduk atau lanskap. Sesuaikan judul kartu jika foto tersebut bukan gambaran umum kehidupan Kebumen.",
+            source: "https://www.kebumenkab.go.id/"
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id") || "menganti";
+    const item = data[id] || data.menganti;
+
+    document.title = item.title + " | Jelajah Kebumen";
+    document.getElementById("detailCategory").textContent = item.category;
+    document.getElementById("detailTitle").textContent = item.title;
+    document.getElementById("detailTitleInline").textContent = item.title;
+    document.getElementById("detailIntro").textContent = item.intro;
+    document.getElementById("detailImage").src = item.image;
+    document.getElementById("detailImage").alt = item.title;
+    document.getElementById("detailCaption").textContent = item.title + " · Kebumen";
+    document.getElementById("detailDescription").textContent = item.description;
+    document.getElementById("detailHistory").textContent = item.history;
+    document.getElementById("detailHighlights").textContent = item.highlights;
+    document.getElementById("detailNote").textContent = item.note;
+    document.getElementById("detailSource").href = item.source;
+    document.getElementById("detailYear").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
