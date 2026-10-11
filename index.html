@@ -1,239 +1,833 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kota Kebumen</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.0/scrollreveal.min.js"></script>
-    <script src="JS/script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#193b4d">
+
+    <title>Jelajah Kebumen | Cerita dari Selatan Jawa</title>
+    <meta name="description" content="Jelajahi wisata alam, budaya, kuliner, dan sejarah Kabupaten Kebumen.">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-          <h1 class="display-4">Selamat Datang di Kota Kebumen</h1>
-        </div>
-        <nav>
-            <ul class="nav justify-content-center">
-              <li><a href="index.html" class="nav-link text-white">Home</a></li>
-              <li>
-                <a href="about.html" class="nav-link text-white">Tentang Kota</a>
-              </li>
-              <li>
-                <a href="feedback.html" class="nav-link text-white">Feedback</a>
-              </li>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="brand-mark">J</span>
+            Jelajah<span class="brand-highlight">Kebumen.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Buka navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#jelajah">Jelajahi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cerita">Cerita Lokal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Tentang Kebumen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-feedback" href="feedback.html">
+                        Beri Masukan <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </li>
             </ul>
-          </nav>
-      </header>
+        </div>
+    </div>
+</nav>
 
-    <!-- Main Content (Landing Page) -->
-    <main>
-      <div class="container py-5">
-        <section id="intro" class="text-center">
-          <h2>Temukan Keindahan Kota Kebumen</h2>
-          <p>Explore berbagai destinasi wisata, sejarah, dan budaya lokal.</p>
-        </section>
 
-        <!-- Slideshow Gambar -->
-        <section id="slideshow" class="my-5">
-          <div
-            id="carouselExampleCaptions"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="images/wisata1.jpg"
-                  class="d-block w-100"
-                  alt="Tempat Wisata 1"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Pantai Menganti</h5>
-                  <p>
-                    Pantai Menganti disebut-sebut sebagai salah satu pantai
-                    terindah di Jawa Tengah. Pantai ini menghadap langsung ke
-                    Samudra Hindia serta dikelilingi perbukitan berupa tebing
-                    karst. Berkat batuan karang yang ada di pantainya,
-                    pemandangan laut Pantai Menganti pun memesona.
-                  </p>
+<!-- HERO -->
+<header class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="row">
+            <div class="col-lg-8 col-xl-7">
+                <span class="hero-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    MENYAPA DARI SELATAN JAWA
+                </span>
+
+                <h1>
+                    Selalu ada<br>
+                    cerita di <span>Kebumen.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Dari garis pantai yang menawan hingga tradisi yang terus
+                    hidup, Kebumen menyimpan banyak kisah untuk dijelajahi
+                    dan dikenang.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#jelajah" class="btn-hero-primary">
+                        Mulai Menjelajah
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="about.html" class="btn-hero-secondary">
+                        Kenali Kebumen
+                    </a>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="images/wisata2.jpg"
-                  class="d-block w-100 img-fluid"
-                  alt="Pantai Menganti"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Goa Jatijajar</h5>
-                  <p>
-                    Selain Pantai Menganti, di Kecamatan Ayah juga terdapat
-                    tempat wisata lain yang populer, yaitu Goa Jatijajar. Tempat
-                    wisata di Kebumen ini merupakan situs geologi yang terbentuk
-                    secara alami dari kapur. Di dalam goa ini terdapat
-                    stalagtit, stalagmit, diorama,serta patung yang
-                    menggambarkan legenda Raden Kamandaka.
-                  </p>
+
+                <div class="hero-note">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Kabupaten Kebumen, Jawa Tengah
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="images/wisata3.jpg"
-                  class="d-block w-100"
-                  alt="Tempat Wisata 3"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Pantai Ayah</h5>
-                  <p>
-                    Pantai Ayah atau yang dikenal sebagai Pantai Logending jadi
-                    salah satu wisata Kebumen yang wajib kamu kunjungi. Pantai
-                    ini punya pemandangan alam indah dengan pasir putih luas dan
-                    air laut yang jernih. Selain menikmati deburan ombak dan
-                    angin pantai yang sepoi-sepoi, wisatawan juga bisa mencoba
-                    berbagai aktivitas seru di sini.
-                  </p>
-                  <br>
-                </div>
-              </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Scroll Effect Section -->
-        <section class="text-center" id="info">
-            <div class="container">
-              <div class="row">
-                <!-- Sejarah Kota Section -->
-                <div class="col-md-4 mb-4">
-                  <div class="card shadow-lg border-light rounded">
-                    <img src="images/sejarahkota.jpg" class="card-img-top" alt="Sejarah Kota" style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                      <h3 class="card-title text-primary">Sejarah Kota</h3>
-                      <p class="card-text">
-                        Jauh sebelum berstatus kabupaten, sekitar abad ke-17 (tahun 1600-an) Kebumen merupakan sebuah wilayah kadipaten yang berada di bawah kekuasaan Kerajaan Mataram Islam yang berpusat di Yogyakarta...
-                      </p>
-                      <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#historyDetail" aria-expanded="false" aria-controls="historyDetail">Baca Selengkapnya</button>
-                      <div class="collapse mt-3" id="historyDetail">
-                        <p class="card-text mt-2">
-                          Mataram Islam merupakan kesultanan besar yang kekuasaannya hampir mendominasi seluruh pulau Jawa. Hegemoni Mataram Islam di pulau Jawa terusik dengan kedatangan kongsi dagang Belanda...
-                        </p>
-                      </div>
+    <div class="hero-bottom-label">
+        <span>01 / JELAJAHI KEINDAHANNYA</span>
+        <span class="hero-bottom-line"></span>
+    </div>
+</header>
+
+
+<!-- PENGANTAR -->
+<section class="intro-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <div class="intro-image-wrap">
+                    <img src="images/wisata.jpg"
+                        alt="Pemandangan alam di Kebumen"
+                        class="intro-image" loading="lazy">
+
+                    <div class="intro-image-label">
+                        <span class="intro-label-number">01</span>
+                        <span>Keindahan yang dekat dengan hati</span>
                     </div>
-                  </div>
-                </div>
-          
-                <!-- Tempat Wisata Section -->
-                <div class="col-md-4 mb-4">
-                  <div class="card shadow-lg border-light rounded">
-                    <img src="images/wisata.jpg" class="card-img-top" alt="Tempat Wisata" style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                      <h3 class="card-title text-success">Tempat Wisata</h3>
-                      <p class="card-text">
-                        Kebumen memiliki banyak tempat wisata menarik yang cocok untuk keluarga. Dari pantai yang indah hingga goa yang eksotis, destinasi ini menawarkan berbagai pengalaman alam yang menakjubkan.
-                      </p>
-                      <button class="btn btn-outline-success" data-bs-toggle="collapse" data-bs-target="#tourismDetail" aria-expanded="false" aria-controls="tourismDetail">Lihat Tempat Wisata</button>
-                      <div class="collapse mt-3" id="tourismDetail">
-                        <ul>
-                          <li>Pantai Karangbolong</li>
-                          <li>Goa Jatijajar</li>
-                          <li>Pantai Ayah</li>
-                          <li>Pantai Menganti</li>
-                          <li>Panjer</li>
-                        </ul>
-                      </div>
+
+                    <div class="intro-decoration" aria-hidden="true">
+                        <i class="fa-solid fa-sun"></i>
                     </div>
-                  </div>
                 </div>
-          
-                <!-- Budaya Lokal Section -->
-                <div class="col-md-4 mb-4">
-                  <div class="card shadow-lg border-light rounded">
-                    <img src="images/budaya.jpg" class="card-img-top" alt="Budaya Lokal" style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                      <h3 class="card-title text-warning">Budaya Lokal</h3>
-                      <p class="card-text">
-                        Kebumen memiliki kekayaan budaya yang unik, mulai dari seni tradisional, upacara adat, hingga kuliner khas yang menggugah selera. Budaya ini telah berkembang selama berabad-abad dan masih dilestarikan hingga saat ini.
-                      </p>
-                      <button class="btn btn-outline-warning" data-bs-toggle="collapse" data-bs-target="#cultureDetail" aria-expanded="false" aria-controls="cultureDetail">Pelajari Lebih Lanjut</button>
-                      <div class="collapse mt-3" id="cultureDetail">
-                        <p class="card-text mt-2">
-                          Beberapa tradisi budaya yang masih dilestarikan antara lain: Tari Topeng, Wayang Kulit, serta kuliner seperti Sate Kelinci dan Nasi Liwet.
-                        </p>
-                        <br>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </section>          
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>Learning Labs 2024 - NIM L0324018 - Khudzaifaha Hannan Burhanuddin</p>
-    </footer>
+            <div class="col-lg-7">
+                <span class="section-kicker">LEBIH DEKAT DENGAN KEBUMEN</span>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+                <h2 class="section-title">
+                    Bukan sekadar tempat,<br>
+                    tetapi penuh <span>cerita.</span>
+                </h2>
 
-    <!-- ScrollReveal JS (untuk animasi scroll) -->
-    <script>
-      ScrollReveal().reveal("#intro", {
-        delay: 300,
-        origin: "top",
-        distance: "50px",
-        duration: 800,
-      });
-      ScrollReveal().reveal("#slideshow", {
-        delay: 400,
-        origin: "bottom",
-        distance: "50px",
-        duration: 800,
-      });
-      ScrollReveal().reveal("#info", {
-        delay: 500,
-        origin: "left",
-        distance: "50px",
-        duration: 800,
-      });
-    </script>
+                <p class="intro-lead">
+                    Kebumen adalah salah satu kabupaten di Provinsi Jawa
+                    Tengah yang menyimpan kekayaan alam, budaya, kuliner,
+                    dan sejarah.
+                </p>
 
-  </body>
+                <p class="intro-text">
+                    Bentang alamnya beragam, mulai dari pantai di pesisir
+                    selatan hingga kawasan perbukitan dan gua. Di balik
+                    keindahan itu, ada tradisi masyarakat, makanan khas,
+                    dan peninggalan sejarah yang menjadi bagian dari
+                    identitas Kebumen.
+                </p>
+
+                <a href="about.html" class="text-link">
+                    Kenali Kebumen lebih jauh
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <div class="intro-facts">
+                    <div class="intro-fact">
+                        <i class="fa-solid fa-water"></i>
+                        <div>
+                            <strong>Wisata Alam</strong>
+                            <span>Pantai, gua, dan perbukitan</span>
+                        </div>
+                    </div>
+
+                    <div class="intro-fact">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        <div>
+                            <strong>Budaya Lokal</strong>
+                            <span>Tradisi yang terus dijaga</span>
+                        </div>
+                    </div>
+
+                    <div class="intro-fact">
+                        <i class="fa-solid fa-utensils"></i>
+                        <div>
+                            <strong>Rasa Khas</strong>
+                            <span>Kuliner dengan cerita tersendiri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- JELAJAHI KEBUMEN -->
+<section class="explore-section" id="jelajah">
+    <div class="container">
+
+        <div class="explore-heading">
+            <div>
+                <span class="section-kicker">ADA BANYAK YANG BISA DITEMUKAN</span>
+
+                <h2 class="section-title">
+                    Yuk, jelajahi <span>Kebumen.</span>
+                </h2>
+
+                <p class="section-description">
+                    Pilih hal yang menarik perhatianmu dan temukan
+                    sisi lain dari Kabupaten Kebumen.
+                </p>
+            </div>
+
+            <div class="explore-heading-note">
+                <span class="heading-note-icon">
+                    <i class="fa-solid fa-compass"></i>
+                </span>
+                <span>Temukan cerita<br>di setiap sudutnya</span>
+            </div>
+        </div>
+
+
+        <!-- PENCARIAN DAN FILTER -->
+        <div class="explore-toolbar">
+            <div class="explore-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="exploreSearch"
+                    aria-label="Cari informasi Kebumen"
+                    placeholder="Cari wisata, budaya, kuliner..."
+                    autocomplete="off">
+            </div>
+
+            <div class="explore-filters" aria-label="Filter kategori">
+                <button type="button" class="explore-filter active"
+                    data-category="semua" aria-pressed="true">
+                    Semua
+                </button>
+
+                <button type="button" class="explore-filter"
+                    data-category="wisata" aria-pressed="false">
+                    <i class="fa-solid fa-mountain-sun me-1"></i> Wisata
+                </button>
+
+                <button type="button" class="explore-filter"
+                    data-category="budaya" aria-pressed="false">
+                    <i class="fa-solid fa-masks-theater me-1"></i> Budaya
+                </button>
+
+                <button type="button" class="explore-filter"
+                    data-category="kuliner" aria-pressed="false">
+                    <i class="fa-solid fa-bowl-food me-1"></i> Kuliner
+                </button>
+
+                <button type="button" class="explore-filter"
+                    data-category="sejarah" aria-pressed="false">
+                    <i class="fa-solid fa-landmark me-1"></i> Sejarah & Alam
+                </button>
+            </div>
+        </div>
+
+        <div class="explore-result-info">
+            <p id="exploreResultCount" aria-live="polite">
+                Menampilkan koleksi pilihan
+            </p>
+        </div>
+
+
+        <!-- GRID KARTU -->
+        <div class="explore-grid" id="exploreGrid">
+
+            <!-- 01 PANTAI MENGANTI -->
+            <article class="explore-card" data-category="wisata">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Pantai Menganti">
+                    <img src="images/wisata.jpg"
+                        alt="Pemandangan Pantai Menganti"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">WISATA ALAM</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">01 — PESISIR SELATAN</span>
+                    <h3>Pantai Menganti</h3>
+                    <p>
+                        Pantai dengan panorama laut dan perbukitan hijau
+                        yang menjadi salah satu daya tarik wisata Kebumen.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 02 PANTAI SUWUK -->
+            <article class="explore-card" data-category="wisata">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Pantai Suwuk">
+                    <img src="images/wisata1.jpg"
+                        alt="Pemandangan pantai di Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">WISATA ALAM</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">02 — WISATA PANTAI</span>
+                    <h3>Pantai Suwuk</h3>
+                    <p>
+                        Destinasi pesisir yang menawarkan suasana pantai
+                        dan pemandangan alam khas wilayah selatan.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 03 GOA JATIJAJAR -->
+            <article class="explore-card" data-category="wisata">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Goa Jatijajar">
+                    <img src="images/wisata2.jpg"
+                        alt="Formasi dan diorama di Goa Jatijajar"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">WISATA GUA</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">03 — KEAJAIBAN ALAM</span>
+                    <h3>Goa Jatijajar</h3>
+                    <p>
+                        Gua alam yang dikenal dengan formasi batuan,
+                        stalaktit, stalagmit, dan kisah legenda setempat.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 04 WADUK SEMPOR -->
+            <article class="explore-card" data-category="wisata">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Waduk Sempor">
+                    <img src="images/wisata3.jpg"
+                        alt="Pemandangan Waduk Sempor"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">WISATA ALAM</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">04 — PEMANDANGAN AIR</span>
+                    <h3>Waduk Sempor</h3>
+                    <p>
+                        Kawasan waduk dengan lanskap perairan dan
+                        perbukitan yang menghadirkan suasana menenangkan.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 05 TARI CEPETAN ALAS -->
+            <article class="explore-card" data-category="budaya">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Tari Cepetan Alas">
+                    <img src="images/budaya.jpg"
+                        alt="Pertunjukan kesenian tradisional"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">SENI TRADISI</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">05 — WARISAN BUDAYA</span>
+                    <h3>Tari Cepetan Alas</h3>
+                    <p>
+                        Kesenian tradisional yang lekat dengan cerita rakyat,
+                        topeng, dan identitas budaya Kebumen.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 06 TARI LAWET -->
+            <article class="explore-card" data-category="budaya">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Tari Lawet">
+                    <img src="images/budaya2.jpg"
+                        alt="Pertunjukan tari tradisional"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">SENI TARI</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">06 — IDENTITAS DAERAH</span>
+                    <h3>Tari Lawet</h3>
+                    <p>
+                        Tarian yang terinspirasi dari burung lawet,
+                        salah satu simbol yang erat dengan Kebumen.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 07 BATIK KEBUMEN: GAMBAR SUDAH DISESUAIKAN -->
+            <article class="explore-card" data-category="budaya">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Batik Kebumen">
+                    <img src="images/batik.jpg"
+                        alt="Motif batik khas daerah"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">KERAJINAN</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">07 — KARYA LOKAL</span>
+                    <h3>Batik Kebumen</h3>
+                    <p>
+                        Kerajinan tekstil yang memperlihatkan kreativitas
+                        perajin serta kekayaan motif dan budaya lokal.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 08 EBLEG: GAMBAR SUDAH DISESUAIKAN -->
+            <article class="explore-card" data-category="budaya">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari kesenian Ebleg">
+                    <img src="images/ebleg.jpg"
+                        alt="Pertunjukan kesenian tradisional Ebleg"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">PERTUNJUKAN</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">08 — SENI RAKYAT</span>
+                    <h3>Ebleg</h3>
+                    <p>
+                        Kesenian rakyat yang menjadi bagian dari kehidupan
+                        budaya masyarakat di wilayah Kebumen.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 09 SATE AMBAL -->
+            <article class="explore-card" data-category="kuliner">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Sate Ambal">
+                    <img src="images/makanan1.jpg"
+                        alt="Sajian kuliner khas daerah"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">KULINER KHAS</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">09 — CITA RASA LOKAL</span>
+                    <h3>Sate Ambal</h3>
+                    <p>
+                        Sate khas Ambal yang dikenal dengan bumbu berbahan
+                        dasar tempe dan cita rasa yang khas.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 10 LANTING -->
+            <article class="explore-card" data-category="kuliner">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari lanting">
+                    <img src="images/makanan2.jpg"
+                        alt="Kuliner dan sajian makanan"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">CAMILAN LOKAL</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">10 — TEMAN BERSANTAI</span>
+                    <h3>Lanting</h3>
+                    <p>
+                        Camilan berbahan singkong yang populer di Kebumen,
+                        dengan bentuk khas dan tekstur renyah.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 11 NASI PENGGEL: GAMBAR SUDAH DISESUAIKAN -->
+            <article class="explore-card" data-category="kuliner">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Nasi Penggel">
+                    <img src="images/makanan3.jpg"
+                        alt="Hidangan nasi khas Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">HIDANGAN TRADISIONAL</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">11 — SARAPAN KHAS</span>
+                    <h3>Nasi Penggel</h3>
+                    <p>
+                        Sajian nasi berbentuk bulat yang biasa dinikmati
+                        bersama lauk dan sayur dalam kuah gurih.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 12 JIPANG KACANG: GAMBAR SUDAH DISESUAIKAN -->
+            <article class="explore-card" data-category="kuliner">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Jipang Kacang">
+                    <img src="images/makanan4.jpg"
+                        alt="Jajanan tradisional jipang kacang"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">JAJANAN TRADISIONAL</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">12 — OLEH-OLEH LOKAL</span>
+                    <h3>Jipang Kacang</h3>
+                    <p>
+                        Jajanan tradisional dengan perpaduan kacang dan
+                        rasa manis yang cocok sebagai oleh-oleh.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 13 BENTENG VAN DER WIJCK -->
+            <article class="explore-card" data-category="sejarah">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Benteng Van der Wijck">
+                    <img src="images/sejarahkota.jpg"
+                        alt="Dokumentasi bangunan dan sejarah Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">SEJARAH</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">13 — JEJAK MASA LALU</span>
+                    <h3>Benteng Van der Wijck</h3>
+                    <p>
+                        Bangunan bersejarah di Gombong yang dikenal dengan
+                        arsitektur bata merah dan kisah masa lalu.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 14 SEJARAH KEBUMEN -->
+            <article class="explore-card" data-category="sejarah">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari sejarah Kebumen">
+                    <img src="images/sejarahkota2.jpg"
+                        alt="Dokumentasi sejarah Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">SEJARAH DAERAH</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">14 — ASAL-USUL DAERAH</span>
+                    <h3>Jejak Sejarah Kebumen</h3>
+                    <p>
+                        Menelusuri perjalanan daerah dan cerita yang
+                        membentuk identitas masyarakat Kebumen.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 15 GEOPARK: GAMBAR SUDAH DISESUAIKAN -->
+            <article class="explore-card" data-category="sejarah">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari Geopark Kebumen">
+                    <img src="images/geopark.jpg"
+                        alt="Bentang alam kawasan geopark Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">WARISAN GEOLOGI</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">15 — KEKAYAAN BUMI</span>
+                    <h3>Geopark Kebumen</h3>
+                    <p>
+                        Kekayaan geologi yang menyimpan cerita panjang
+                        tentang bentang alam dan sejarah bumi.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- 16 KEBUMEN HARI INI -->
+            <article class="explore-card" data-category="sejarah">
+                <a href="about.html" class="explore-card-image-link"
+                    aria-label="Pelajari kehidupan di Kebumen">
+                    <img src="images/wisata4.jpg"
+                        alt="Pemandangan wilayah Kebumen"
+                        class="explore-card-image" loading="lazy">
+                    <span class="explore-card-category">KEHIDUPAN LOKAL</span>
+                </a>
+
+                <div class="explore-card-body">
+                    <span class="explore-card-number">16 — KEBUMEN HARI INI</span>
+                    <h3>Kebumen Hari Ini</h3>
+                    <p>
+                        Mengenal kehidupan masyarakat, potensi daerah,
+                        dan perkembangan Kebumen di masa kini.
+                    </p>
+                    <a href="about.html" class="explore-card-link">
+                        Baca selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="explore-empty" id="exploreEmpty" hidden>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Belum ada hasil yang cocok</h3>
+            <p>Coba kata kunci lain atau pilih kategori berbeda.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CERITA LOKAL -->
+<section class="stories-section" id="cerita">
+    <div class="container">
+        <div class="row align-items-end g-3 mb-5">
+            <div class="col-lg-8">
+                <span class="section-kicker">LEBIH DARI SEKADAR DESTINASI</span>
+                <h2 class="section-title">
+                    Cerita yang membuat<br>
+                    Kebumen <span>istimewa.</span>
+                </h2>
+            </div>
+
+            <div class="col-lg-4">
+                <p class="section-description stories-intro">
+                    Setiap sudut daerah punya kisah. Inilah beberapa hal
+                    yang membuat Kebumen layak dikenal lebih dekat.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <article class="story-card story-card-coral">
+                    <div class="story-card-icon">
+                        <i class="fa-solid fa-earth-asia"></i>
+                    </div>
+                    <span class="story-card-label">ALAM & LINGKUNGAN</span>
+                    <h3>Keindahan yang perlu dijaga</h3>
+                    <p>
+                        Pantai, gua, perbukitan, dan bentang geologi
+                        menjadi pengingat bahwa alam bukan hanya untuk
+                        dinikmati, tetapi juga untuk dirawat bersama.
+                    </p>
+                    <a href="about.html" class="story-link">
+                        Kenali potensi alam <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="story-card story-card-yellow">
+                    <div class="story-card-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <span class="story-card-label">BUDAYA & MASYARAKAT</span>
+                    <h3>Tradisi yang terus hidup</h3>
+                    <p>
+                        Kesenian dan kebiasaan lokal menunjukkan kreativitas
+                        masyarakat sekaligus menjaga hubungan antargenerasi.
+                    </p>
+                    <a href="#jelajah" class="story-link">
+                        Kenali budaya lokal <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="story-card story-card-blue">
+                    <div class="story-card-icon">
+                        <i class="fa-solid fa-bowl-rice"></i>
+                    </div>
+                    <span class="story-card-label">KULINER & KESEHARIAN</span>
+                    <h3>Rasa yang punya identitas</h3>
+                    <p>
+                        Makanan khas bukan hanya soal rasa, melainkan juga
+                        tentang kebiasaan dan cerita masyarakat yang
+                        mewariskannya.
+                    </p>
+                    <a href="#jelajah" class="story-link">
+                        Jelajahi kuliner <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- AJAKAN FEEDBACK -->
+<section class="feedback-cta">
+    <div class="container">
+        <div class="feedback-cta-inner">
+            <div class="feedback-cta-content">
+                <span class="section-kicker">BAGIAN DARI CERITA INI</span>
+                <h2>Punya cerita tentang <span>Kebumen?</span></h2>
+                <p>
+                    Sampaikan saran, pendapat, atau informasi yang menurutmu
+                    menarik. Masukanmu membantu website ini menjadi lebih baik.
+                </p>
+            </div>
+
+            <a href="feedback.html" class="btn-feedback-cta">
+                Kirim Masukan <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row gy-4 align-items-start">
+            <div class="col-lg-5">
+                <a class="footer-brand" href="index.html">
+                    <span class="brand-mark">J</span>
+                    Jelajah<span class="brand-highlight">Kebumen.</span>
+                </a>
+
+                <p class="footer-description">
+                    Website pengenalan Kabupaten Kebumen melalui wisata,
+                    budaya, kuliner, dan sejarah daerah.
+                </p>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <h3 class="footer-heading">Jelajahi</h3>
+                <ul class="footer-links">
+                    <li><a href="#jelajah">Wisata & alam</a></li>
+                    <li><a href="#jelajah">Budaya lokal</a></li>
+                    <li><a href="#jelajah">Kuliner khas</a></li>
+                    <li><a href="#jelajah">Sejarah daerah</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-lg-4">
+                <h3 class="footer-heading">Informasi</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">Tentang Kebumen</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li>
+                        <a href="https://www.kebumenkab.go.id/"
+                            target="_blank" rel="noopener noreferrer">
+                            Situs resmi pemerintah
+                            <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span>
+                Jelajah Kebumen. Proyek pengenalan daerah.
+            </p>
+
+            <a href="#mainNavbar" class="back-to-top">
+                Kembali ke atas <i class="fa-solid fa-arrow-up ms-1"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JAVASCRIPT BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JAVASCRIPT PROYEK -->
+<script src="JS/script.js"></script>
+
+<script>
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
 </html>
