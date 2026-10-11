@@ -1,250 +1,1220 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informasi Kota Wisata</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.0/scrollreveal.min.js"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
-      <div class="container">
-        <h1 class="display-4">Informasi Kota Wisata</h1>
-        <nav>
-          <ul class="nav justify-content-center">
-            <li><a href="index.html" class="nav-link text-white">Home</a></li>
-            <li>
-              <a href="about.html" class="nav-link text-white">Tentang Kota</a>
-            </li>
-            <li>
-              <a href="feedback.html" class="nav-link text-white">Feedback</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Main Content (Konten Utama) -->
-    <main>
-      <div class="container py-5">
-        <!-- Sejarah Kota Section -->
-        <section id="sejarah" class="mb-5">
-          <h2 class="text-center text-primary mb-4">
-            Sejarah Kota <i class="fas fa-history"></i>
-          </h2>
-          <p class="lead text-center mb-4">
-            Kota Kebumen adalah ibu kota dari Kabupaten Kebumen yang terletak di
-            Provinsi Jawa Tengah, Indonesia. Kota ini memiliki sejarah panjang
-            yang dipengaruhi oleh berbagai kejadian penting dalam perkembangan
-            budaya, politik, dan ekonomi di wilayah Jawa Tengah. Sejarah Kebumen
-            juga terkait erat dengan perkembangan kerajaan-kerajaan di Jawa,
-            peranannya dalam perjuangan kemerdekaan Indonesia, dan budaya lokal
-            yang masih lestari hingga kini.
+  <title>Tentang Kebumen — Jelajah Kebumen</title>
+  <meta name="description" content="Kenali sejarah, budaya, dan perjalanan Kabupaten Kebumen, Jawa Tengah.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
+
+  <style>
+    /* ======================================
+       ABOUT PAGE — JELAJAH KEBUMEN
+       ====================================== */
+
+    .about-page {
+      --about-navy: #163c50;
+      --about-coral: #e86f51;
+      --about-yellow: #f3c86b;
+      --about-cream: #f5f0e7;
+      --about-paper: #fffdf9;
+      --about-muted: #69777a;
+      color: var(--about-navy);
+      background: var(--about-paper);
+      font-family: "DM Sans", Arial, sans-serif;
+    }
+
+    .about-page *,
+    .about-page *::before,
+    .about-page *::after {
+      box-sizing: border-box;
+    }
+
+    .about-page img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-page a {
+      text-decoration: none;
+    }
+
+    .about-page h1,
+    .about-page h2,
+    .about-page h3 {
+      color: var(--about-navy);
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+    }
+
+    .about-page p {
+      color: var(--about-muted);
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .about-container {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    /* NAVIGATION */
+
+    .about-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 14px 0;
+      background: rgba(255, 253, 249, 0.96);
+      border-bottom: 1px solid #eee8dd;
+      backdrop-filter: blur(14px);
+    }
+
+    .about-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .about-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--about-navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .about-brand-symbol {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      color: white;
+      background: var(--about-coral);
+      border-radius: 11px 11px 11px 3px;
+      font-size: 19px;
+    }
+
+    .about-brand span:last-child em {
+      color: var(--about-coral);
+      font-style: normal;
+    }
+
+    .about-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .about-nav-links a {
+      color: #647276;
+      font-size: 12px;
+      font-weight: 700;
+      transition: color .2s ease;
+    }
+
+    .about-nav-links a:hover,
+    .about-nav-links a.active {
+      color: var(--about-coral);
+    }
+
+    .about-nav-cta {
+      padding: 11px 16px;
+      color: white !important;
+      background: var(--about-navy);
+      border-radius: 4px;
+    }
+
+    .about-nav-cta:hover {
+      background: var(--about-coral);
+    }
+
+    /* HERO */
+
+    .about-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 75px;
+      background:
+        radial-gradient(ellipse at 10% 0%, #f7dfc8 0, transparent 45%),
+        var(--about-cream);
+    }
+
+    .about-breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 38px;
+      color: #8a918c;
+      font-size: 11px;
+    }
+
+    .about-breadcrumb a {
+      color: var(--about-coral);
+      font-weight: 700;
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .about-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--about-coral);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .about-eyebrow::before {
+      width: 24px;
+      height: 2px;
+      background: var(--about-coral);
+      content: "";
+    }
+
+    .about-hero h1 {
+      max-width: 620px;
+      margin: 0 0 23px;
+      font-size: clamp(43px, 5.5vw, 74px);
+    }
+
+    .about-hero h1 em {
+      color: var(--about-coral);
+      font-style: normal;
+    }
+
+    .about-hero-copy > p {
+      max-width: 480px;
+      margin-bottom: 27px;
+    }
+
+    .about-primary-button {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 13px 19px;
+      color: white;
+      background: var(--about-navy);
+      border: 0;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .about-primary-button:hover {
+      color: white;
+      background: var(--about-coral);
+      transform: translateY(-2px);
+    }
+
+    .about-primary-button span {
+      font-size: 18px;
+    }
+
+    .about-hero-visual {
+      position: relative;
+      min-width: 0;
+      padding: 0 0 28px 20px;
+    }
+
+    .about-hero-visual::before {
+      position: absolute;
+      top: -20px;
+      right: -18px;
+      width: 65%;
+      height: 60%;
+      background: var(--about-yellow);
+      content: "";
+    }
+
+    .about-hero-visual img {
+      position: relative;
+      height: 430px;
+      background: #d9d9cf;
+      border-radius: 2px;
+    }
+
+    .about-photo-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(300px, 85%);
+      padding: 18px 21px;
+      color: white;
+      background: var(--about-navy);
+    }
+
+    .about-photo-caption span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--about-yellow);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .about-photo-caption strong {
+      font-family: "Manrope", sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* QUICK FACTS */
+
+    .about-facts {
+      padding: 0 0 70px;
+      background: var(--about-cream);
+    }
+
+    .about-facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #ddd4c6;
+      border-bottom: 1px solid #ddd4c6;
+    }
+
+    .about-fact {
+      padding: 25px 27px;
+      border-right: 1px solid #ddd4c6;
+    }
+
+    .about-fact:first-child {
+      padding-left: 0;
+    }
+
+    .about-fact:last-child {
+      border-right: 0;
+    }
+
+    .about-fact span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--about-coral);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .about-fact strong {
+      color: var(--about-navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    /* HISTORY INTRO */
+
+    .about-history {
+      padding: 100px 0;
+      background: var(--about-paper);
+    }
+
+    .about-section-header {
+      display: grid;
+      grid-template-columns: 1fr .72fr;
+      align-items: end;
+      gap: 60px;
+      margin-bottom: 50px;
+    }
+
+    .about-section-label {
+      margin-bottom: 15px;
+      color: var(--about-coral);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .about-section-header h2,
+    .about-story-copy h2,
+    .about-culture h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 49px);
+    }
+
+    .about-section-header h2 em,
+    .about-story-copy h2 em,
+    .about-culture h2 em {
+      color: var(--about-coral);
+      font-style: normal;
+    }
+
+    .about-section-header > p {
+      margin: 0;
+    }
+
+    .about-history-grid {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      align-items: start;
+      gap: 55px;
+    }
+
+    .about-history-photo {
+      position: relative;
+      padding: 0 18px 20px 0;
+    }
+
+    .about-history-photo::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      height: 65%;
+      background: var(--about-yellow);
+      content: "";
+    }
+
+    .about-history-photo img {
+      position: relative;
+      height: 390px;
+    }
+
+    .about-history-photo small {
+      display: block;
+      position: relative;
+      margin-top: 14px;
+      color: #92958e;
+      font-size: 10px;
+    }
+
+    .about-history-copy h3 {
+      margin-bottom: 17px;
+      font-size: 24px;
+    }
+
+    .about-history-copy p {
+      margin-bottom: 17px;
+    }
+
+    .about-note {
+      margin-top: 28px;
+      padding: 19px 22px;
+      background: var(--about-cream);
+      border-left: 3px solid var(--about-coral);
+    }
+
+    .about-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--about-navy);
+      font-size: 12px;
+    }
+
+    .about-note p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    /* TIMELINE */
+
+    .about-timeline {
+      padding: 90px 0 100px;
+      background: var(--about-cream);
+    }
+
+    .about-timeline-heading {
+      max-width: 650px;
+      margin-bottom: 50px;
+    }
+
+    .about-timeline-heading h2 {
+      margin-bottom: 17px;
+      font-size: clamp(33px, 4vw, 48px);
+    }
+
+    .about-timeline-heading h2 em {
+      color: var(--about-coral);
+      font-style: normal;
+    }
+
+    .about-timeline-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .about-timeline-card {
+      position: relative;
+      min-height: 230px;
+      padding: 27px 24px;
+      background: var(--about-paper);
+      border-top: 3px solid var(--about-coral);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .about-timeline-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(22, 60, 80, .08);
+    }
+
+    .about-timeline-number {
+      display: block;
+      margin-bottom: 28px;
+      color: var(--about-coral);
+      font-family: "Manrope", sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .about-timeline-card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .about-timeline-card p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    /* LOCAL CULTURE */
+
+    .about-culture {
+      padding: 100px 0;
+      background: var(--about-paper);
+    }
+
+    .about-culture-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .about-culture-copy h2 {
+      margin-bottom: 23px;
+    }
+
+    .about-culture-copy > p {
+      margin-bottom: 24px;
+    }
+
+    .about-culture-list {
+      display: grid;
+      gap: 0;
+      margin-top: 28px;
+      border-top: 1px solid #e9e2d8;
+    }
+
+    .about-culture-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      padding: 17px 0;
+      border-bottom: 1px solid #e9e2d8;
+    }
+
+    .about-culture-icon {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      place-items: center;
+      color: var(--about-navy);
+      background: var(--about-cream);
+      border-radius: 50%;
+      font-size: 15px;
+    }
+
+    .about-culture-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--about-navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 13px;
+    }
+
+    .about-culture-item p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .about-culture-visual {
+      position: relative;
+      padding: 20px 0 0 20px;
+    }
+
+    .about-culture-visual::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65%;
+      height: 70%;
+      background: var(--about-coral);
+      content: "";
+    }
+
+    .about-culture-visual img {
+      position: relative;
+      height: 480px;
+    }
+
+    .about-culture-caption {
+      position: relative;
+      width: 85%;
+      margin: -1px 0 0 auto;
+      padding: 19px 22px;
+      color: white;
+      background: var(--about-navy);
+    }
+
+    .about-culture-caption strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+    }
+
+    .about-culture-caption span {
+      color: #d3dfe0;
+      font-size: 11px;
+    }
+
+    /* CLOSING BANNER */
+
+    .about-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0;
+      background: var(--about-navy);
+    }
+
+    .about-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .about-cta .about-section-label {
+      color: var(--about-yellow);
+    }
+
+    .about-cta h2 {
+      max-width: 600px;
+      margin: 0 0 15px;
+      color: white;
+      font-size: clamp(30px, 4vw, 47px);
+    }
+
+    .about-cta p {
+      max-width: 530px;
+      margin: 0;
+      color: #d1dadd;
+      font-size: 13px;
+    }
+
+    .about-cta .about-primary-button {
+      flex-shrink: 0;
+      color: var(--about-navy);
+      background: var(--about-yellow);
+    }
+
+    .about-cta .about-primary-button:hover {
+      color: white;
+      background: var(--about-coral);
+    }
+
+    .about-cta-decoration {
+      position: absolute;
+      top: -90px;
+      right: 5%;
+      color: rgba(255, 255, 255, .045);
+      font-family: "Manrope", sans-serif;
+      font-size: 300px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    /* FOOTER */
+
+    .about-footer {
+      padding: 35px 0;
+      color: #d1dadd;
+      background: #102e3d;
+    }
+
+    .about-footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .about-footer p {
+      margin: 0;
+      color: #b8c7ca;
+      font-size: 11px;
+    }
+
+    .about-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .about-footer-links a {
+      color: #d1dadd;
+      font-size: 11px;
+    }
+
+    .about-footer-links a:hover {
+      color: var(--about-yellow);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .about-hero-grid {
+        gap: 35px;
+      }
+
+      .about-section-header {
+        gap: 30px;
+      }
+
+      .about-history-grid,
+      .about-culture-grid {
+        gap: 35px;
+      }
+
+      .about-nav-cta {
+        display: none;
+      }
+
+      .about-nav-links {
+        gap: 18px;
+      }
+
+      .about-timeline-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .about-container {
+        width: calc(100% - 32px);
+      }
+
+      .about-nav-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .about-nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .about-nav-links a {
+        font-size: 11px;
+      }
+
+      .about-hero {
+        padding: 35px 0 45px;
+      }
+
+      .about-breadcrumb {
+        margin-bottom: 27px;
+      }
+
+      .about-hero-grid,
+      .about-section-header,
+      .about-history-grid,
+      .about-culture-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-hero h1 {
+        font-size: clamp(43px, 12vw, 60px);
+      }
+
+      .about-hero-visual {
+        padding-left: 12px;
+      }
+
+      .about-hero-visual img {
+        height: 350px;
+      }
+
+      .about-facts {
+        padding-bottom: 45px;
+      }
+
+      .about-facts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-fact,
+      .about-fact:first-child {
+        padding: 17px 0;
+        border-right: 0;
+        border-bottom: 1px solid #ddd4c6;
+      }
+
+      .about-fact:last-child {
+        border-bottom: 0;
+      }
+
+      .about-history,
+      .about-culture {
+        padding: 70px 0;
+      }
+
+      .about-history-photo img {
+        height: 330px;
+      }
+
+      .about-timeline {
+        padding: 70px 0;
+      }
+
+      .about-timeline-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .about-timeline-card {
+        min-height: 0;
+      }
+
+      .about-timeline-number {
+        margin-bottom: 16px;
+      }
+
+      .about-culture-visual img {
+        height: 350px;
+      }
+
+      .about-cta {
+        padding: 55px 0;
+      }
+
+      .about-cta-inner,
+      .about-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .about-cta-decoration {
+        right: -20px;
+        font-size: 180px;
+      }
+
+      .about-footer-links {
+        gap: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .about-page *,
+      .about-page *::before,
+      .about-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="about-page">
+
+  <!-- NAVIGATION -->
+  <nav class="about-nav">
+    <div class="about-container about-nav-inner">
+
+      <a class="about-brand" href="index.html">
+        <span class="about-brand-symbol">J</span>
+        <span>jelajah<em>kebumen.</em></span>
+      </a>
+
+      <div class="about-nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="about.html" class="active">Tentang Kota</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+
+      <a class="about-nav-cta" href="#sejarah">
+        Kenali Sejarah <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="about-container">
+
+        <div class="about-breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span>/</span>
+          <span>Tentang Kebumen</span>
+        </div>
+
+        <div class="about-hero-grid">
+
+          <div class="about-hero-copy">
+            <div class="about-eyebrow">
+              Cerita dari Jawa Tengah
+            </div>
+
+            <h1>
+              Lebih Dekat dengan
+              <em>Kebumen.</em>
+            </h1>
+
+            <p>
+              Sebuah perjalanan mengenal tanah yang menyimpan cerita
+              sejarah, tradisi yang terus hidup, serta keindahan alam
+              dari pesisir selatan hingga kawasan perbukitan.
+            </p>
+
+            <a href="#sejarah" class="about-primary-button">
+              Mulai Menjelajah <span>↓</span>
+            </a>
+          </div>
+
+          <div class="about-hero-visual">
+            <img
+              src="images/sejarahkota.jpg"
+              alt="Dokumentasi sejarah dan suasana Kabupaten Kebumen"
+              onerror="this.onerror=null;this.src='images/sejarahkota2.jpg';"
+            >
+
+            <div class="about-photo-caption">
+              <span>Kenali tempatnya</span>
+              <strong>Kebumen, ruang bertemunya alam dan cerita.</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMASI SINGKAT -->
+    <section class="about-facts">
+      <div class="about-container about-facts-grid">
+
+        <div class="about-fact">
+          <span>01 / LOKASI</span>
+          <strong>Jawa Tengah, Indonesia</strong>
+        </div>
+
+        <div class="about-fact">
+          <span>02 / KARAKTER</span>
+          <strong>Pesisir, perbukitan, dan pedesaan</strong>
+        </div>
+
+        <div class="about-fact">
+          <span>03 / IDENTITAS</span>
+          <strong>Sejarah dan budaya lokal</strong>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEJARAH -->
+    <section class="about-history" id="sejarah">
+      <div class="about-container">
+
+        <div class="about-section-header">
+          <div>
+            <div class="about-section-label">
+              Menelusuri masa lalu
+            </div>
+
+            <h2>
+              Setiap tempat punya
+              <em>cerita.</em>
+            </h2>
+          </div>
+
+          <p>
+            Mengenal Kebumen bukan hanya tentang melihat tempatnya,
+            tetapi juga memahami perjalanan masyarakat, perkembangan
+            wilayah, dan warisan yang membentuk identitasnya.
           </p>
-          <div class="row">
-            <div class="col-md-6 mb-4">
+        </div>
+
+        <div class="about-history-grid">
+
+          <div class="about-history-photo">
+            <img
+              src="images/sejarahkota2.jpg"
+              alt="Ilustrasi arsip dan perjalanan sejarah Kebumen"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='images/sejarahkota.jpg';"
+            >
+
+            <small>
+              Dokumentasi visual sejarah — sesuaikan dengan arsip
+              yang tersedia.
+            </small>
+          </div>
+
+          <div class="about-history-copy">
+            <h3>Asal-usul dan perjalanan Kebumen</h3>
+
+            <p>
+              Kebumen merupakan kabupaten di bagian selatan Provinsi
+              Jawa Tengah. Wilayahnya memiliki karakter geografis
+              yang beragam, mulai dari kawasan pesisir Samudra Hindia
+              hingga dataran dan perbukitan.
+            </p>
+
+            <p>
+              Perjalanan sejarah Kebumen berkaitan dengan perkembangan
+              permukiman, pemerintahan, kehidupan agraris, perdagangan,
+              dan dinamika masyarakat di wilayah Jawa Tengah.
+              Berbagai peninggalan serta tradisi lokal menjadi bagian
+              penting untuk memahami perjalanan tersebut.
+            </p>
+
+            <p>
+              Sejarah sebuah daerah tidak berdiri sendiri. Cerita
+              keluarga, arsip, bangunan bersejarah, dan tradisi
+              masyarakat turut membantu menjelaskan bagaimana
+              identitas lokal berkembang dari masa ke masa.
+            </p>
+
+            <div class="about-note">
+              <strong>Catatan sejarah</strong>
               <p>
-                Nama "Kebumen" dipercaya berasal dari kata "Kebo" yang berarti
-                kerbau, dan "Men" yang bisa diartikan sebagai tempat. Sehingga,
-                Kebumen secara harfiah dapat diartikan sebagai "tempat kerbau"
-                atau "wilayah yang banyak kerbaunya." Hal ini mungkin berkaitan
-                dengan kondisi alam dan pertanian di daerah tersebut yang
-                mendukung kehidupan peternakan kerbau pada masa lalu. Namun, ada
-                juga pendapat lain yang menyebutkan bahwa nama Kebumen berasal
-                dari kata "Kebuh" yang berarti kebun, mengacu pada banyaknya
-                perkebunan atau lahan pertanian yang ada di daerah tersebut pada
-                masa lampau. Kebumen sekarang merupakan kota yang berkembang
-                dengan pesat. Walaupun lebih dikenal sebagai daerah pertanian,
-                sektor pariwisata dan industri juga mulai berkembang. Kebumen
-                juga dikenal memiliki berbagai obyek wisata alam, seperti
-                pantai, gua, dan pegunungan, yang menarik pengunjung baik dari
-                dalam maupun luar daerah. Kota Kebumen memiliki sejarah yang
-                panjang dan kaya, yang dipengaruhi oleh kerajaan-kerajaan besar
-                di Jawa, penjajahan Belanda, dan perjuangan kemerdekaan
-                Indonesia.
+                Penjelasan ini merupakan pengantar umum. Untuk
+                memastikan tahun, tokoh, dan asal-usul nama Kebumen,
+                gunakan sumber dari pemerintah daerah, arsip sejarah,
+                atau museum yang dapat diverifikasi.
               </p>
             </div>
-            <div class="col-md-6 mb-4">
-              <div class="position-relative">
-                <img
-                  src="images/sejarahkota2.jpg"
-                  class="img-fluid rounded shadow-lg"
-                  alt="Sejarah Kota"
-                />
-                <div
-                  class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-white"
-                >
-                  <h3>Sejarah yang Memikat</h3>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
 
-        <!-- Tempat Wisata Section -->
-        <section id="tempat-wisata" class="mb-5">
-          <h2 class="text-center text-success mb-4">
-            Tempat Wisata Populer <i class="fas fa-map-marker-alt"></i>
-          </h2>
-          <p class="lead text-center mb-4">
-            Temukan berbagai tempat menarik yang bisa Anda kunjungi di kota ini.
-            Setiap tempat memiliki daya tarik tersendiri yang siap memanjakan
-            mata Anda.
-          </p>
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-lg border-light rounded">
-                <img
-                  src="images/wisata4.jpg"
-                  class="card-img-top"
-                  alt="Tempat Wisata 1"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Waduk Sempor</h5>
-                  <p class="card-text">
-                    Waduk Sempor adalah tempat wisata yang menyajikan ketenangan
-                    karena tak hanya menyegarkan, tapi juga indah karena
-                    dikelilingi pohon pinus dan bukit-bukit.
-                  </p>
-                  <br />
-                  <a href="#" class="btn btn-outline-success"
-                    >Pelajari Lebih Lanjut</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-lg border-light rounded">
-                <img
-                  src="images/wisata5.jpg"
-                  class="card-img-top"
-                  alt="Tempat Wisata 2"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Bukit Jerit</h5>
-                  <p class="card-text">
-                    Bukit Jerit adalah salah satu surga tersembunyi untuk para
-                    pecinta wisata alam. Bukit Jerit ini terletak di desa
-                    Ketanggung Pasir, Kecamatan Ayah. Bagi detikers yang ingin
-                    menenangkan pikiran sambil mendengarkan debur ombak.
-                  </p>
-                  <a href="#" class="btn btn-outline-success"
-                    >Pelajari Lebih Lanjut</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-lg border-light rounded">
-                <img
-                  src="images/wisata6.jpg"
-                  class="card-img-top"
-                  alt="Tempat Wisata 3"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Benteng Van Der Wijk</h5>
-                  <p class="card-text">
-                    Benteng yang bercat merah tersebut merupakan saksi sejarah
-                    pertarungan Pangeran Diponegoro dengan Belanda. Benteng ini
-                    dulunya juga pernah dijadikan lokasi syuting film The Raid 2
-                    lho.
-                  </p>
-                  <a href="#" class="btn btn-outline-success"
-                    >Pelajari Lebih Lanjut</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Budaya Lokal Section -->
-        <section id="budaya" class="mb-5">
-          <h2 class="text-center text-warning mb-4">
-            Budaya Lokal <i class="fas fa-theater-masks"></i>
-          </h2>
-          <p class="lead text-center mb-4">
-            Kenali budaya lokal yang unik, seperti tarian tradisional, festival
-            tahunan, dan makanan khas yang hanya ada di sini.
-          </p>
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <p>
-                Kota ini terkenal dengan festival tahunan yang diadakan setiap
-                tahun, yang mengundang wisatawan dari seluruh dunia untuk
-                menikmati kekayaan budaya. Anda bisa menyaksikan tarian
-                tradisional, pertunjukan musik, dan berbagai kegiatan yang
-                menarik. Salah satunya Tari Cepet ini dipercaya berasal dari
-                kebudayaan lokal yang berkembang di daerah Kebumen. Nama "Cepet"
-                dalam bahasa Jawa memiliki makna yang berkaitan dengan gerakan
-                tariannya yang cepat dan dinamis. Tari Cepet biasanya
-                ditampilkan dalam berbagai acara adat, upacara, maupun acara
-                hiburan di masyarakat. Tarian ini sering ditampilkan pada pesta
-                rakyat, perayaan, atau acara tertentu yang melibatkan komunitas
-                dan kebersamaan masyarakat setempat. Tari Cepet Kebumen adalah
-                sebuah tarian tradisional yang enerjik, cepat, dan penuh
-                semangat. Melalui gerakan-gerakan yang dinamis, tarian ini
-                menggambarkan keceriaan dan kekompakan masyarakat Kebumen.
-              </p>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="position-relative">
-                <img
-                  src="images/budaya2.jpg"
-                  class="img-fluid rounded shadow-lg"
-                  alt="Budaya Lokal"
-                />
-                <div
-                  class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-white"
-                >
-                  <h3>Festival Budaya</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>Learning Labs 2024 - NIM L0324018 - Khudzaifaha Hannan Burhanuddin</p>
-    </footer>
+    <!-- PERJALANAN WAKTU -->
+    <section class="about-timeline">
+      <div class="about-container">
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <div class="about-timeline-heading">
+          <div class="about-section-label">
+            Jejak perjalanan
+          </div>
 
-    <!-- ScrollReveal JS (untuk animasi scroll) -->
-    <script>
-      ScrollReveal().reveal("#sejarah", {
-        delay: 300,
-        origin: "left",
-        distance: "50px",
-        duration: 800,
-      });
-      ScrollReveal().reveal("#tempat-wisata", {
-        delay: 400,
-        origin: "right",
-        distance: "50px",
-        duration: 800,
-      });
-      ScrollReveal().reveal("#budaya", {
-        delay: 500,
-        origin: "bottom",
-        distance: "50px",
-        duration: 800,
-      });
-    </script>
-  </body>
+          <h2>
+            Memahami sejarah
+            <em>selangkah demi selangkah.</em>
+          </h2>
+
+          <p>
+            Tiga sudut pandang untuk mulai mengenal perjalanan
+            sebuah daerah dan masyarakatnya.
+          </p>
+        </div>
+
+        <div class="about-timeline-list">
+
+          <article class="about-timeline-card">
+            <span class="about-timeline-number">01 — MASA AWAL</span>
+            <h3>Lingkungan dan permukiman</h3>
+            <p>
+              Kondisi alam, sumber air, lahan pertanian, dan jalur
+              pergerakan manusia ikut membentuk kehidupan masyarakat
+              di berbagai wilayah Kebumen.
+            </p>
+          </article>
+
+          <article class="about-timeline-card">
+            <span class="about-timeline-number">02 — PERKEMBANGAN</span>
+            <h3>Pemerintahan dan masyarakat</h3>
+            <p>
+              Perubahan administrasi, kegiatan ekonomi, serta
+              hubungan antardaerah menjadi bagian dari perjalanan
+              sejarah lokal.
+            </p>
+          </article>
+
+          <article class="about-timeline-card">
+            <span class="about-timeline-number">03 — MASA KINI</span>
+            <h3>Warisan yang terus hidup</h3>
+            <p>
+              Tradisi, bahasa, kesenian, kuliner, dan cerita
+              masyarakat menjadi jembatan antara generasi terdahulu
+              dan kehidupan sekarang.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BUDAYA -->
+    <section class="about-culture" id="budaya">
+      <div class="about-container about-culture-grid">
+
+        <div class="about-culture-copy">
+          <div class="about-section-label">
+            Identitas masyarakat
+          </div>
+
+          <h2>
+            Bukan sekadar tempat,
+            tetapi juga <em>budaya.</em>
+          </h2>
+
+          <p>
+            Kebumen memiliki kekayaan kehidupan lokal yang dapat
+            dijelajahi melalui makanan khas, kesenian, tradisi,
+            serta aktivitas sehari-hari masyarakatnya.
+          </p>
+
+          <div class="about-culture-list">
+
+            <div class="about-culture-item">
+              <span class="about-culture-icon" aria-hidden="true">✳</span>
+              <div>
+                <strong>Kuliner khas</strong>
+                <p>
+                  Kenali makanan lokal dan cerita di balik
+                  hidangan yang diwariskan antargenerasi.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-culture-item">
+              <span class="about-culture-icon" aria-hidden="true">◈</span>
+              <div>
+                <strong>Tradisi dan kesenian</strong>
+                <p>
+                  Jelajahi kegiatan budaya, pertunjukan, serta
+                  kebiasaan masyarakat setempat.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-culture-item">
+              <span class="about-culture-icon" aria-hidden="true">⌂</span>
+              <div>
+                <strong>Kehidupan masyarakat</strong>
+                <p>
+                  Temukan keramahan, kegiatan ekonomi, dan
+                  karakter kehidupan lokal.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="about-culture-visual">
+          <img
+            src="images/budaya.jpg"
+            alt="Dokumentasi budaya lokal Kebumen"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='images/budaya2.jpg';"
+          >
+
+          <div class="about-culture-caption">
+            <strong>Warisan yang patut dikenal.</strong>
+            <span>Budaya tumbuh melalui masyarakat yang menjaganya.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PENUTUP -->
+    <section class="about-cta">
+      <div class="about-container about-cta-inner">
+
+        <div>
+          <div class="about-section-label">
+            Perjalananmu dimulai di sini
+          </div>
+
+          <h2>
+            Sudah siap menjelajahi Kebumen?
+          </h2>
+
+          <p>
+            Temukan destinasi wisata, jelajahi keindahan alam,
+            dan kenali lebih dekat cerita di balik setiap tempat.
+          </p>
+        </div>
+
+        <a href="index.html#destinasi" class="about-primary-button">
+          Jelajahi Destinasi <span>↗</span>
+        </a>
+
+        <div class="about-cta-decoration" aria-hidden="true">K</div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+    <div class="about-container about-footer-inner">
+
+      <p>
+        © <span id="currentYear"></span> Jelajah Kebumen.
+        Dibuat untuk mengenalkan keindahan Kebumen.
+      </p>
+
+      <div class="about-footer-links">
+        <a href="index.html">Beranda</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#budaya">Budaya</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<scripts>
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+</scripts>
+
+</body>
 </html>
